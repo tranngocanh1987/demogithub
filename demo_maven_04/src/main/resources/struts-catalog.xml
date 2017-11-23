@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="pkgCatalog" extends="default" namespace="/">
+		<action name="catalog" class="catalog" method="execute">
+			<result name="success">/views/catalogManager.jsp</result>
+		</action>
+		
+		<action name="deleteCatalog" class="catalog" method="delete">
+			<result name="success" type="redirect">catalog</result>
+		</action>
+		
+		<action name="saveOrUpdateCatalog" class="catalog" method="saveOrUpdateCatalog">
+			<result name="success" type="redirect">catalog</result>
+		</action>
+		
+		<action name="editCatalog" class="catalog" method="edit">
+			<result name="success">/views/catalogManager.jsp</result>
+		</action>
+		
+	</package>
+</struts>

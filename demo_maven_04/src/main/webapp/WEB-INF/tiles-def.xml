@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+   "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+   "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+   <definition name="mainTemplate" template="/views/mainTemplate.jsp">
+      <put-attribute name="title"  value="Customer Registration Form"/>
+      <put-attribute name="header" value="/views/header.jsp"/>
+      <put-attribute name="menu"   value="/views/menu.jsp"/>
+      <put-attribute name="body"   value="/views/body.jsp"/>
+      <put-attribute name="footer"   value="/views/footer.jsp"/>
+   </definition>
+   
+   <definition name="success" extends="mainTemplate">
+      <put-attribute name="title"  value="User Added Successfully"/>
+      <put-attribute name="body"   value="/views/success.jsp"/>      
+   </definition>
+   
+   <definition name="userTemplate" extends="mainTemplate">
+      <put-attribute name="title"  value="User Controller"/>
+      <put-attribute name="body"   value="/views/userController.jsp"/>      
+   </definition>
+   
+    <definition name="loginTemplate" extends="mainTemplate">
+      <put-attribute name="title"  value="Login"/>
+      <put-attribute name="body"   value="/views/login.jsp"/>      
+   </definition>
+   
+   <definition name="adminTemplate" extends="mainTemplate">
+      <put-attribute name="title"  value="Admin"/>
+      <put-attribute name="body"   value="/views/admin.jsp"/>      
+   </definition>
+  
+</tiles-definitions>
